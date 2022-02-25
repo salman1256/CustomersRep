@@ -1,0 +1,45 @@
+﻿@model IEnumerable<WebAppMVC.Models.Customer>
+
+@{
+    ViewBag.Title = "CustomerList";
+    Layout = "~/Views/Shared/_LayoutOne.cshtml";
+}
+
+<h2>CustomerList</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CCity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CODLimit)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CCity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CODLimit)
+        </td>
+       
+    </tr>
+}
+
+</table>
